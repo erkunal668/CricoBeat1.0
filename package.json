@@ -1,12 +1,14 @@
 {
   "name": "cricobeat1.0",
-  "homepage": "https://www.cricobeat.com",
+  "homepage": "https://erkunal668.github.io/CricoBeat1.0",
   "version": "0.1.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -66,6 +68,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
