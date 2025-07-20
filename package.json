@@ -3,11 +3,12 @@
   "homepage": "https://erkunal668.github.io/CricoBeat1.0",
   "version": "0.1.0",
   "scripts": {
-  "dev": "next dev",
-  "build": "next build && next export",
-  "start": "next start"
-}
-
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "npm run dev",
+    "predeploy": "npx next build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
