@@ -13,18 +13,18 @@ export function CategoryGrid() {
           </p>
         </div>
 
-        <div className="grid gap-6 py-12 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 justify-center py-8">
           {categoriesData.map(({ name, icon: Icon, description, slug }) => (
-            <Link key={name} href={`/categories/${slug}`} className="group">
-              <Card className="flex flex-col items-center p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                <CardHeader>
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Icon className="h-8 w-8" />
+            <Link key={name} href={`/categories/${slug}`} className="group flex justify-center">
+              <Card className="flex flex-col items-center p-3 sm:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg min-h-[120px] max-w-[160px] w-full aspect-square">
+                <CardHeader className="p-0 mb-2">
+                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Icon className="h-7 w-7" />
                   </div>
-                  <CardTitle className="text-xl font-bold">{name}</CardTitle>
+                  <CardTitle className="text-base font-bold mt-1">{name}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-500 dark:text-gray-400">{description}</p>
+                <CardContent className="p-0">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-tight">{description}</p>
                 </CardContent>
               </Card>
             </Link>
